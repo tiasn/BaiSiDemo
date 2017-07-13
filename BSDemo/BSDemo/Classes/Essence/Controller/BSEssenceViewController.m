@@ -8,7 +8,6 @@
 
 #import "BSEssenceViewController.h"
 #import "BSTitleView.h"
-#import "BSBaseRequest.h"
 
 #import "BSAllViewController.h"
 #import "BSVideoViewController.h"
@@ -16,14 +15,11 @@
 #import "BSPictureViewController.h"
 #import "BSWordViewController.h"
 
-#define kTitleViewH 50
 
 @interface BSEssenceViewController ()<BSTitleViewDelegate, UIScrollViewDelegate>
 
 
 @property (nonatomic , strong) BSTitleView *titleView;
-
-@property (nonatomic , strong) BSBaseRequest *baseRequest;
 
 @property (nonatomic, strong) UIScrollView *contentScrollView;
 
@@ -50,14 +46,6 @@
 }
 
 
-- (BSBaseRequest *)baseRequest
-{
-    if (!_baseRequest) {
-        _baseRequest = [BSBaseRequest requestWithURL:BSCommonURL];
-    }
-    
-    return _baseRequest;
-}
 
 
 - (void)viewDidLoad {
@@ -69,7 +57,6 @@
     
     [self.view addSubview:self.titleView];
     
-//    [self testAFN];
     
     self.currentIndex = 0;
     
@@ -81,36 +68,6 @@
 }
 
 
-
-
-
-- (void)testAFN{
-
-    // 2.拼接参数
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"list";
-    parameters[@"c"] = @"data";
-    parameters[@"type"] = @"1";
-    
-    [self.baseRequest startWithMethod:BSHTTPTypePOST params:parameters completion:^(id responseObject, NSString *message, BOOL success) {
-        
-        if (success) {
-            
-            NSLog(@"%@", responseObject);
-            
-        }else{
-            
-            NSLog(@"%@", message);
-            
-        }
-        
-        
-    }];
-    
-
-
-
-}
 
 
 

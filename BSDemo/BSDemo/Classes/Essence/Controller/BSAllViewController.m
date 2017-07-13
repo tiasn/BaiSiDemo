@@ -7,86 +7,140 @@
 //
 
 #import "BSAllViewController.h"
+#import "BSTopicViewCell.h"
+#import "BSBaseRequest.h"
+
+#import "BSTopicModel.h"
+#import "MJExtension.h"
+
+/* cell的重用标识 */
+static NSString * const BSTopicCellId = @"BSTopicCellId";
 
 @interface BSAllViewController ()
+
+@property (nonatomic , strong) BSBaseRequest *baseRequest;
+
+@property (nonatomic , strong) NSMutableArray *topicModelsArray;
+
 
 @end
 
 @implementation BSAllViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor lightGrayColor];
+//网络请求
+- (BSBaseRequest *)baseRequest
+{
+    if (!_baseRequest) {
+        _baseRequest = [BSBaseRequest requestWithURL:BSCommonURL];
+    }
+    return _baseRequest;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//model数组
+- (NSMutableArray *)topicModelsArray {
+    
+    if (!_topicModelsArray) {
+        _topicModelsArray = [NSMutableArray array];
+    }
+    return _topicModelsArray;
 }
+
+
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    
+    [self setupUI];
+    
+    [self getAllData];
+    
+}
+
+
+
+// 初始化设置
+- (void)setupUI{
+    
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, kTabbarH + kNavH, 0);
+    
+    
+    //注册cell
+    UINib *cellNib = [UINib nibWithNibName:NSStringFromClass([BSTopicViewCell class]) bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:BSTopicCellId];
+    
+}
+
+
+
+
+- (void)getAllData{
+    
+    // 2.拼接参数
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    parameters[@"a"] = @"list";
+    parameters[@"c"] = @"data";
+//    parameters[@"type"] = @"1"; //全部
+    parameters[@"type"] = @"29"; // 段子
+
+    
+    [self.baseRequest startWithMethod:BSHTTPTypePOST params:parameters completion:^(NSDictionary *responseObject, NSString *message, BOOL success) {
+        
+        if (success) {
+            
+            
+            NSArray *allTopics = [responseObject objectForKey:@"list"];
+            NSLog(@"%@", allTopics);
+            
+            self.topicModelsArray = [BSTopicModel mj_objectArrayWithKeyValuesArray:allTopics];
+            
+            NSLog(@"model数量:%zd", self.topicModelsArray.count);
+            
+        }else{
+            
+            NSLog(@"%@", message);
+            
+        }
+        
+        
+    }];
+    
+    
+    
+    
+}
+
+
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return 1;
 }
 
-/*
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 140;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 10.0;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    BSTopicViewCell *cell = [tableView dequeueReusableCellWithIdentifier:BSTopicCellId];
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

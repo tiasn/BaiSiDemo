@@ -21,6 +21,22 @@
 #define kSCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define kSCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 
+#define kTitleViewH 50
+#define kNavH 64
+#define kTabbarH 49
+
+#define kBSMargin 15
+
+
+#ifdef DEBUG // 调试
+
+#define XMGLog(...) NSLog(__VA_ARGS__);
+
+#else // 发布
+
+#define XMGLog(...)
+
+#endif
 
 #endif /* BSPrefixHeader_pch */
 
