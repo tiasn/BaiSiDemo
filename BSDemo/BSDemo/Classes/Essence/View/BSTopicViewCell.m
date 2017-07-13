@@ -27,6 +27,8 @@
     self.nameLabel.text = model.name;
     self.posTime.text = model.passtime;
     
+    [self.dingBtn setTitle:[NSString stringWithFormat:@"%zd", model.ding ]forState:UIControlStateNormal];
+    
     [self.headerImgView sd_setImageWithURL:[NSURL URLWithString:model.profile_image] placeholderImage:[UIImage imageNamed:@"default_pic"]];
     
     // 类型为段子
