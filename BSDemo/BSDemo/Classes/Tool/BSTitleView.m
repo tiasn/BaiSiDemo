@@ -56,7 +56,7 @@
 
 - (void)initUI
 {
-    self.backgroundColor = [UIColor lightGrayColor];
+    self.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2];
     self.titleLable = [NSMutableArray array];
     self.currentIndex = 0;
     

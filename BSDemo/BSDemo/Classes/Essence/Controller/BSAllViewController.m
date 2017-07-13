@@ -12,6 +12,7 @@
 
 #import "BSTopicModel.h"
 #import "MJExtension.h"
+#import "MJRefresh.h"
 
 /* cell的重用标识 */
 static NSString * const BSTopicCellId = @"BSTopicCellId";
@@ -22,6 +23,7 @@ static NSString * const BSTopicCellId = @"BSTopicCellId";
 
 @property (nonatomic , strong) NSMutableArray *topicModelsArray;
 
+@property (nonatomic, copy)NSString *maxtime;
 
 @end
 
@@ -66,6 +68,18 @@ static NSString * const BSTopicCellId = @"BSTopicCellId";
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
 
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, kTabbarH + kNavH, 0);
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self.topicModelsArray removeAllObjects];
+        self.maxtime = @"";
+        [self getAllData];
+    }];
+    
+    self.tableView.mj_footer = [MJRefreshAutoGifFooter footerWithRefreshingBlock:^{
+        [self getAllData];
+    }];
+    
     
     
     //注册cell
@@ -84,23 +98,46 @@ static NSString * const BSTopicCellId = @"BSTopicCellId";
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
 //    parameters[@"type"] = @"1"; //全部
-    parameters[@"type"] = @"29"; // 段子
+//    parameters[@"type"] = @"29"; // 段子
+    parameters[@"type"] = @"10"; // 图片
+
+    parameters[@"maxtime"] = self.maxtime;
+    parameters[@"page"] = @(self.topicModelsArray.count / 20);
+    
 
     
     [self.baseRequest startWithMethod:BSHTTPTypePOST params:parameters completion:^(NSDictionary *responseObject, NSString *message, BOOL success) {
         
         if (success) {
             
+            NSDictionary *info = [responseObject objectForKey:@"info"];
+            self.maxtime = [info objectForKey:@"maxtime"];
             
             NSArray *allTopics = [responseObject objectForKey:@"list"];
             NSLog(@"%@", allTopics);
             
-            self.topicModelsArray = [BSTopicModel mj_objectArrayWithKeyValuesArray:allTopics];
+            NSArray *modelArray = [BSTopicModel mj_objectArrayWithKeyValuesArray:allTopics];
+            
+            [self.topicModelsArray addObjectsFromArray:modelArray];
             
             NSLog(@"model数量:%zd", self.topicModelsArray.count);
             
-        }else{
             
+            
+            if (modelArray.count < 20) {
+                [self.tableView.mj_footer endRefreshingWithNoMoreData];
+            }else{
+            
+                [self.tableView.mj_header endRefreshing];
+                [self.tableView.mj_footer endRefreshing];
+            
+            }
+            
+            [self.tableView reloadData];
+            
+        }else{
+            [self.tableView.mj_header endRefreshing];
+
             NSLog(@"%@", message);
             
         }
@@ -117,30 +154,35 @@ static NSString * const BSTopicCellId = @"BSTopicCellId";
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 5;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.topicModelsArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 140;
+    BSTopicModel *model = [self.topicModelsArray objectAtIndex:indexPath.row];
+
+    return model.cellHeight;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
-{
-    return 10.0;
-}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     BSTopicViewCell *cell = [tableView dequeueReusableCellWithIdentifier:BSTopicCellId];
     
+    
+    BSTopicModel *model = [self.topicModelsArray objectAtIndex:indexPath.row];
+    cell.model = model;
+    
     return cell;
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+
+}
 
 @end

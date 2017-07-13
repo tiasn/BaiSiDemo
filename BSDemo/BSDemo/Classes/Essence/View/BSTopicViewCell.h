@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class BSTopicModel;
+
 @interface BSTopicViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *headerImgView;
@@ -19,6 +21,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareBtn;
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
 
+
+@property (nonatomic , strong) UILabel *content;
+
+
+@property (nonatomic , strong) BSTopicModel *model;
 
 
 @end

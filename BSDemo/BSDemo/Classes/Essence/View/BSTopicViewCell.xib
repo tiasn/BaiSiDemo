@@ -73,7 +73,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKG-hQ-YMj">
-                        <rect key="frame" x="0.0" y="99" width="320" height="40"/>
+                        <rect key="frame" x="0.0" y="89.5" width="320" height="40"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-content-line" translatesAutoresizingMaskIntoConstraints="NO" id="LaP-y8-jYa">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="0.5"/>
@@ -222,6 +222,13 @@
                             <constraint firstItem="A93-eC-KZx" firstAttribute="width" secondItem="RKG-hQ-YMj" secondAttribute="width" multiplier="0.25" id="yLi-QU-p5f"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZC-DB-znc">
+                        <rect key="frame" x="0.0" y="129.5" width="320" height="10"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="GDy-za-hRW"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="RKG-hQ-YMj" secondAttribute="trailing" id="5d5-qu-f5h"/>
@@ -229,7 +236,10 @@
                     <constraint firstItem="Z8y-bY-YVr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TqE-Ml-YPx"/>
                     <constraint firstAttribute="trailing" secondItem="Z8y-bY-YVr" secondAttribute="trailing" id="Wi1-4e-l8E"/>
                     <constraint firstItem="RKG-hQ-YMj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Xdb-Od-v17"/>
-                    <constraint firstAttribute="bottom" secondItem="RKG-hQ-YMj" secondAttribute="bottom" id="cuP-NI-PbM"/>
+                    <constraint firstAttribute="bottom" secondItem="RKG-hQ-YMj" secondAttribute="bottom" constant="10" id="cuP-NI-PbM"/>
+                    <constraint firstItem="aZC-DB-znc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gyQ-R4-uGx"/>
+                    <constraint firstAttribute="trailing" secondItem="aZC-DB-znc" secondAttribute="trailing" id="hTk-b3-Ui1"/>
+                    <constraint firstAttribute="bottom" secondItem="aZC-DB-znc" secondAttribute="bottom" id="zev-AW-ihK"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

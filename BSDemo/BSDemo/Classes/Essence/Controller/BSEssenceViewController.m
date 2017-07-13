@@ -53,7 +53,7 @@
 
     self.automaticallyAdjustsScrollViewInsets = NO;
 
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.titleView];
     

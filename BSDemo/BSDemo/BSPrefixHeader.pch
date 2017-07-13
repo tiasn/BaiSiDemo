@@ -27,6 +27,7 @@
 
 #define kBSMargin 15
 
+#define kCellTextY 45
 
 #ifdef DEBUG // 调试
 
