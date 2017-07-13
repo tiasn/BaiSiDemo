@@ -18,6 +18,8 @@
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor lightGrayColor];
+    
+    NSLog(@"%@", BSCommonURL);
 }
 
 - (void)didReceiveMemoryWarning {

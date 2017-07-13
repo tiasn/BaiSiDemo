@@ -1,0 +1,26 @@
+//
+//  BSPrefixHeader.pch
+//  BSDemo
+//
+//  Created by LTX on 2017/7/13.
+//  Copyright © 2017年 LTX. All rights reserved.
+//
+
+#ifndef BSPrefixHeader_pch
+#define BSPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIView+Extension.h"
+
+
+#define BSCommonURL @"http://api.budejie.com/api/api_open.php"
+
+// 获取屏幕 宽度、高度
+#define kSCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define kSCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+
+#endif /* BSPrefixHeader_pch */
+
