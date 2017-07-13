@@ -176,57 +176,23 @@
 
 /**
  外面调用
- 
- @param progress 滚动进度
  @param fromIndex 原来的位置
  @param toIndex 新的位置
  */
--(void)setLableWithProgress:(CGFloat)progress fromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex offset:(CGFloat)offset
+- (void)setLabelWithFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex
 {
-    
     //取出lable
     UILabel *sourceLable = [self.titleLable objectAtIndex:fromIndex];
     UILabel *targetLable =  [self.titleLable objectAtIndex:toIndex];
     
-    CGFloat fixW = (sourceLable.width - kScrollLineW)/2;
+    sourceLable.textColor = [UIColor blackColor];
+    targetLable.textColor = [UIColor redColor];
     
-    CGFloat moveTotal = targetLable.centerX - sourceLable.centerX;
-    CGFloat moveX = moveTotal * progress +fixW;
-    
-    //指示线联动
-    if (offset < 0) {
-        self.scrollLine.centerX = targetLable.centerX;
-    }else{
-        
-        //        self.scrollLine.transform = CGAffineTransformMakeTranslation(moveX, 0);
-        self.scrollLine.x = sourceLable.frame.origin.x + moveX;
-    }
-    
-    NSLog(@"滚动：%f = %f", offset, self.width);
-    
-    
-    
-    //颜色渐变
-    //取出渐变范围
-    
-    //233,75,27
-    //103,103,103
-    
-    CGFloat fixR = 255 - 0;
-    CGFloat fixG = 0 - 0;
-    CGFloat fixB = 0- 0;
-    
-    if (offset > 0 && offset < self.width *2) {
-        
-        sourceLable.textColor = [UIColor colorWithRed:255.9 - fixR * progress green:0.0 - fixG * progress blue:0.0 - fixB * progress];
-        targetLable.textColor = [UIColor colorWithRed:0 + fixR * progress green:0 +  fixG * progress blue:0 + fixB * progress];
-        
-    }
-    //保存最新的index
-    self.currentIndex = toIndex;
-    
-    
+    self.scrollLine.centerX = targetLable.centerX;
+
 }
+
+
 
 
 @end

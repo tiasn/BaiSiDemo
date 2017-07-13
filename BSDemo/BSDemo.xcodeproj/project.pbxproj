@@ -18,6 +18,13 @@
 		356E58531F1715AD00C80D24 /* BSTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E584D1F1715AD00C80D24 /* BSTitleView.m */; };
 		356E58541F1715AD00C80D24 /* UIColor+ZXLazy.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E584F1F1715AD00C80D24 /* UIColor+ZXLazy.m */; };
 		356E58551F1715AD00C80D24 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E58511F1715AD00C80D24 /* UIView+Extension.m */; };
+		356E58601F17192300C80D24 /* BSAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E58571F17192300C80D24 /* BSAllViewController.m */; };
+		356E58611F17192300C80D24 /* BSPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E58591F17192300C80D24 /* BSPictureViewController.m */; };
+		356E58621F17192300C80D24 /* BSVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E585B1F17192300C80D24 /* BSVideoViewController.m */; };
+		356E58631F17192300C80D24 /* BSVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E585D1F17192300C80D24 /* BSVoiceViewController.m */; };
+		356E58641F17192300C80D24 /* BSWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E585F1F17192300C80D24 /* BSWordViewController.m */; };
+		356E58681F17246600C80D24 /* BSTopicViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E58661F17246600C80D24 /* BSTopicViewCell.m */; };
+		356E58691F17246600C80D24 /* BSTopicViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356E58671F17246600C80D24 /* BSTopicViewCell.xib */; };
 		DD593747645D82CB3BAF1E1E /* libPods-BSDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E82109840AB104E49230284F /* libPods-BSDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +51,19 @@
 		356E584F1F1715AD00C80D24 /* UIColor+ZXLazy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZXLazy.m"; sourceTree = "<group>"; };
 		356E58501F1715AD00C80D24 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		356E58511F1715AD00C80D24 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		356E58561F17192300C80D24 /* BSAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAllViewController.h; sourceTree = "<group>"; };
+		356E58571F17192300C80D24 /* BSAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAllViewController.m; sourceTree = "<group>"; };
+		356E58581F17192300C80D24 /* BSPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPictureViewController.h; sourceTree = "<group>"; };
+		356E58591F17192300C80D24 /* BSPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPictureViewController.m; sourceTree = "<group>"; };
+		356E585A1F17192300C80D24 /* BSVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVideoViewController.h; sourceTree = "<group>"; };
+		356E585B1F17192300C80D24 /* BSVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVideoViewController.m; sourceTree = "<group>"; };
+		356E585C1F17192300C80D24 /* BSVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVoiceViewController.h; sourceTree = "<group>"; };
+		356E585D1F17192300C80D24 /* BSVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVoiceViewController.m; sourceTree = "<group>"; };
+		356E585E1F17192300C80D24 /* BSWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWordViewController.h; sourceTree = "<group>"; };
+		356E585F1F17192300C80D24 /* BSWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWordViewController.m; sourceTree = "<group>"; };
+		356E58651F17246600C80D24 /* BSTopicViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicViewCell.h; sourceTree = "<group>"; };
+		356E58661F17246600C80D24 /* BSTopicViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicViewCell.m; sourceTree = "<group>"; };
+		356E58671F17246600C80D24 /* BSTopicViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSTopicViewCell.xib; sourceTree = "<group>"; };
 		6CCF8C092D69597FC0AB0943 /* Pods-BSDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BSDemo/Pods-BSDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BE6AEEDF3544BA6180608890 /* Pods-BSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSDemo/Pods-BSDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E82109840AB104E49230284F /* libPods-BSDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BSDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +191,16 @@
 			children = (
 				356E58401F17105900C80D24 /* BSEssenceViewController.h */,
 				356E58411F17105900C80D24 /* BSEssenceViewController.m */,
+				356E58561F17192300C80D24 /* BSAllViewController.h */,
+				356E58571F17192300C80D24 /* BSAllViewController.m */,
+				356E58581F17192300C80D24 /* BSPictureViewController.h */,
+				356E58591F17192300C80D24 /* BSPictureViewController.m */,
+				356E585A1F17192300C80D24 /* BSVideoViewController.h */,
+				356E585B1F17192300C80D24 /* BSVideoViewController.m */,
+				356E585C1F17192300C80D24 /* BSVoiceViewController.h */,
+				356E585D1F17192300C80D24 /* BSVoiceViewController.m */,
+				356E585E1F17192300C80D24 /* BSWordViewController.h */,
+				356E585F1F17192300C80D24 /* BSWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +215,9 @@
 		356E583F1F17103600C80D24 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				356E58651F17246600C80D24 /* BSTopicViewCell.h */,
+				356E58661F17246600C80D24 /* BSTopicViewCell.m */,
+				356E58671F17246600C80D24 /* BSTopicViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,6 +282,7 @@
 		356E580F1F170EE400C80D24 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BS;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = LTX;
 				TargetAttributes = {
@@ -284,6 +318,7 @@
 			files = (
 				356E582A1F170EE400C80D24 /* LaunchScreen.storyboard in Resources */,
 				356E58271F170EE400C80D24 /* Assets.xcassets in Resources */,
+				356E58691F17246600C80D24 /* BSTopicViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,14 +378,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				356E58551F1715AD00C80D24 /* UIView+Extension.m in Sources */,
+				356E58621F17192300C80D24 /* BSVideoViewController.m in Sources */,
+				356E58681F17246600C80D24 /* BSTopicViewCell.m in Sources */,
 				356E58531F1715AD00C80D24 /* BSTitleView.m in Sources */,
+				356E58631F17192300C80D24 /* BSVoiceViewController.m in Sources */,
 				356E583A1F170FB700C80D24 /* BSMainTabbarController.m in Sources */,
 				356E58421F17105900C80D24 /* BSEssenceViewController.m in Sources */,
+				356E58611F17192300C80D24 /* BSPictureViewController.m in Sources */,
+				356E58641F17192300C80D24 /* BSWordViewController.m in Sources */,
 				356E581F1F170EE400C80D24 /* AppDelegate.m in Sources */,
 				356E581C1F170EE400C80D24 /* main.m in Sources */,
 				356E58541F1715AD00C80D24 /* UIColor+ZXLazy.m in Sources */,
 				356E583B1F170FB700C80D24 /* BSNavigationViewController.m in Sources */,
 				356E58521F1715AD00C80D24 /* BSBaseRequest.m in Sources */,
+				356E58601F17192300C80D24 /* BSAllViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

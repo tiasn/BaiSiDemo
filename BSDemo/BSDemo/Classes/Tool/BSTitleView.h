@@ -26,6 +26,9 @@
 // 自定义构造方法
 - (id)initWithFrame:(CGRect)frame titles:(NSArray *)titles;
 
+
+- (void)setLabelWithFromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex;
+
 // 设置Lable
 - (void)setLableWithProgress:(CGFloat)progress fromIndex:(NSInteger)fromIndex toIndex:(NSInteger)toIndex offset:(CGFloat)offset;
 

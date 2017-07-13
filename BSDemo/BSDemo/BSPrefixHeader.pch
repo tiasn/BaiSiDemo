@@ -15,7 +15,7 @@
 #import "UIView+Extension.h"
 
 
-#define BSCommonURL @"http://api.budejie.com/api/api_open.php"
+#define BSCommonURL @"https://api.budejie.com/api/api_open.php"
 
 // 获取屏幕 宽度、高度
 #define kSCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
