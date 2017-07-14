@@ -99,11 +99,11 @@ static NSString * const BSTopicCellId = @"BSTopicCellId";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-//    parameters[@"type"] = @"1"; //全部
+    parameters[@"type"] = @"1"; //全部
 //    parameters[@"type"] = @"29"; // 段子
 //    parameters[@"type"] = @"10"; // 图片
 
-        parameters[@"type"] = @"31"; // 视频
+//        parameters[@"type"] = @"31"; // 视频
 
     parameters[@"maxtime"] = self.maxtime;
     parameters[@"page"] = @(self.topicModelsArray.count / 20);

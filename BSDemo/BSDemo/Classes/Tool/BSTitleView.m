@@ -56,7 +56,6 @@
 
 - (void)initUI
 {
-    self.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
     self.titleLable = [NSMutableArray array];
     self.currentIndex = 0;
     
@@ -67,7 +66,6 @@
     self.scrollView.scrollsToTop = NO;
     self.scrollView.bounces = NO;
     
-    self.scrollView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
     
     [self addSubview:self.scrollView];
     

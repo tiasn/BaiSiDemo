@@ -74,8 +74,10 @@
     // 中间的内容
     if (self.type != BSTopicTypeWord) { // 中间有内容（图片、声音、视频）
         CGFloat middleW = textMaxSize.width;
-        CGFloat middleH = middleW * (self.height/2) / (self.width/2);
-//        CGFloat middleH = 120;
+        CGFloat middleH = middleW * self.height / self.width;
+        
+#warning 方便调试
+        middleH = middleH > 250 ? 250 : middleH; // 方便调试
 
         CGFloat middleY = _cellHeight;
         CGFloat middleX = 0;

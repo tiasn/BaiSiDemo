@@ -33,6 +33,7 @@
 		356E587A1F1857F000C80D24 /* BSViedoCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356E58791F1857F000C80D24 /* BSViedoCellView.xib */; };
 		356E587C1F1857FD00C80D24 /* BSVoiceCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356E587B1F1857FD00C80D24 /* BSVoiceCellView.xib */; };
 		356E587E1F18580B00C80D24 /* BSPictureCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356E587D1F18580B00C80D24 /* BSPictureCellView.xib */; };
+		356E588B1F18B79100C80D24 /* UIImage+TX.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E588A1F18B79100C80D24 /* UIImage+TX.m */; };
 		DD593747645D82CB3BAF1E1E /* libPods-BSDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E82109840AB104E49230284F /* libPods-BSDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,8 @@
 		356E58791F1857F000C80D24 /* BSViedoCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSViedoCellView.xib; sourceTree = "<group>"; };
 		356E587B1F1857FD00C80D24 /* BSVoiceCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSVoiceCellView.xib; sourceTree = "<group>"; };
 		356E587D1F18580B00C80D24 /* BSPictureCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPictureCellView.xib; sourceTree = "<group>"; };
+		356E58891F18B79100C80D24 /* UIImage+TX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TX.h"; sourceTree = "<group>"; };
+		356E588A1F18B79100C80D24 /* UIImage+TX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TX.m"; sourceTree = "<group>"; };
 		6CCF8C092D69597FC0AB0943 /* Pods-BSDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BSDemo/Pods-BSDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BE6AEEDF3544BA6180608890 /* Pods-BSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSDemo/Pods-BSDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E82109840AB104E49230284F /* libPods-BSDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BSDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,6 +267,8 @@
 		356E58491F1715AD00C80D24 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				356E58891F18B79100C80D24 /* UIImage+TX.h */,
+				356E588A1F18B79100C80D24 /* UIImage+TX.m */,
 				356E584A1F1715AD00C80D24 /* BSBaseRequest.h */,
 				356E584B1F1715AD00C80D24 /* BSBaseRequest.m */,
 				356E584C1F1715AD00C80D24 /* BSTitleView.h */,
@@ -432,6 +437,7 @@
 				356E58641F17192300C80D24 /* BSWordViewController.m in Sources */,
 				356E581F1F170EE400C80D24 /* AppDelegate.m in Sources */,
 				356E581C1F170EE400C80D24 /* main.m in Sources */,
+				356E588B1F18B79100C80D24 /* UIImage+TX.m in Sources */,
 				356E58541F1715AD00C80D24 /* UIColor+ZXLazy.m in Sources */,
 				356E586E1F1751C900C80D24 /* BSTopicModel.m in Sources */,
 				356E58721F1857A600C80D24 /* BSViedoCellView.m in Sources */,
