@@ -27,6 +27,12 @@
 		356E58691F17246600C80D24 /* BSTopicViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356E58671F17246600C80D24 /* BSTopicViewCell.xib */; };
 		356E586B1F17517300C80D24 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E586A1F17517300C80D24 /* Foundation+Log.m */; };
 		356E586E1F1751C900C80D24 /* BSTopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E586D1F1751C900C80D24 /* BSTopicModel.m */; };
+		356E58721F1857A600C80D24 /* BSViedoCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E58711F1857A600C80D24 /* BSViedoCellView.m */; };
+		356E58751F1857B800C80D24 /* BSVoiceCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E58741F1857B800C80D24 /* BSVoiceCellView.m */; };
+		356E58781F1857D000C80D24 /* BSPictureCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 356E58771F1857D000C80D24 /* BSPictureCellView.m */; };
+		356E587A1F1857F000C80D24 /* BSViedoCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356E58791F1857F000C80D24 /* BSViedoCellView.xib */; };
+		356E587C1F1857FD00C80D24 /* BSVoiceCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356E587B1F1857FD00C80D24 /* BSVoiceCellView.xib */; };
+		356E587E1F18580B00C80D24 /* BSPictureCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 356E587D1F18580B00C80D24 /* BSPictureCellView.xib */; };
 		DD593747645D82CB3BAF1E1E /* libPods-BSDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E82109840AB104E49230284F /* libPods-BSDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +75,15 @@
 		356E586A1F17517300C80D24 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		356E586C1F1751C900C80D24 /* BSTopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTopicModel.h; sourceTree = "<group>"; };
 		356E586D1F1751C900C80D24 /* BSTopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTopicModel.m; sourceTree = "<group>"; };
+		356E58701F1857A600C80D24 /* BSViedoCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSViedoCellView.h; sourceTree = "<group>"; };
+		356E58711F1857A600C80D24 /* BSViedoCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSViedoCellView.m; sourceTree = "<group>"; };
+		356E58731F1857B800C80D24 /* BSVoiceCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSVoiceCellView.h; sourceTree = "<group>"; };
+		356E58741F1857B800C80D24 /* BSVoiceCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSVoiceCellView.m; sourceTree = "<group>"; };
+		356E58761F1857D000C80D24 /* BSPictureCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSPictureCellView.h; sourceTree = "<group>"; };
+		356E58771F1857D000C80D24 /* BSPictureCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSPictureCellView.m; sourceTree = "<group>"; };
+		356E58791F1857F000C80D24 /* BSViedoCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSViedoCellView.xib; sourceTree = "<group>"; };
+		356E587B1F1857FD00C80D24 /* BSVoiceCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSVoiceCellView.xib; sourceTree = "<group>"; };
+		356E587D1F18580B00C80D24 /* BSPictureCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BSPictureCellView.xib; sourceTree = "<group>"; };
 		6CCF8C092D69597FC0AB0943 /* Pods-BSDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-BSDemo/Pods-BSDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BE6AEEDF3544BA6180608890 /* Pods-BSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSDemo/Pods-BSDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E82109840AB104E49230284F /* libPods-BSDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BSDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +199,7 @@
 		356E583C1F17103600C80D24 /* Essence */ = {
 			isa = PBXGroup;
 			children = (
+				356E586F1F177CEC00C80D24 /* ViewModel */,
 				356E583D1F17103600C80D24 /* Controller */,
 				356E583E1F17103600C80D24 /* Model */,
 				356E583F1F17103600C80D24 /* View */,
@@ -225,6 +241,15 @@
 				356E58651F17246600C80D24 /* BSTopicViewCell.h */,
 				356E58661F17246600C80D24 /* BSTopicViewCell.m */,
 				356E58671F17246600C80D24 /* BSTopicViewCell.xib */,
+				356E58701F1857A600C80D24 /* BSViedoCellView.h */,
+				356E58711F1857A600C80D24 /* BSViedoCellView.m */,
+				356E58791F1857F000C80D24 /* BSViedoCellView.xib */,
+				356E58731F1857B800C80D24 /* BSVoiceCellView.h */,
+				356E58741F1857B800C80D24 /* BSVoiceCellView.m */,
+				356E587B1F1857FD00C80D24 /* BSVoiceCellView.xib */,
+				356E58761F1857D000C80D24 /* BSPictureCellView.h */,
+				356E58771F1857D000C80D24 /* BSPictureCellView.m */,
+				356E587D1F18580B00C80D24 /* BSPictureCellView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +275,13 @@
 				356E586A1F17517300C80D24 /* Foundation+Log.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		356E586F1F177CEC00C80D24 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A61B3113E27C321AFC0E268C /* Pods */ = {
@@ -324,9 +356,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356E587E1F18580B00C80D24 /* BSPictureCellView.xib in Resources */,
+				356E587C1F1857FD00C80D24 /* BSVoiceCellView.xib in Resources */,
 				356E582A1F170EE400C80D24 /* LaunchScreen.storyboard in Resources */,
 				356E58271F170EE400C80D24 /* Assets.xcassets in Resources */,
 				356E58691F17246600C80D24 /* BSTopicViewCell.xib in Resources */,
+				356E587A1F1857F000C80D24 /* BSViedoCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +426,7 @@
 				356E58531F1715AD00C80D24 /* BSTitleView.m in Sources */,
 				356E58631F17192300C80D24 /* BSVoiceViewController.m in Sources */,
 				356E583A1F170FB700C80D24 /* BSMainTabbarController.m in Sources */,
+				356E58751F1857B800C80D24 /* BSVoiceCellView.m in Sources */,
 				356E58421F17105900C80D24 /* BSEssenceViewController.m in Sources */,
 				356E58611F17192300C80D24 /* BSPictureViewController.m in Sources */,
 				356E58641F17192300C80D24 /* BSWordViewController.m in Sources */,
@@ -398,9 +434,11 @@
 				356E581C1F170EE400C80D24 /* main.m in Sources */,
 				356E58541F1715AD00C80D24 /* UIColor+ZXLazy.m in Sources */,
 				356E586E1F1751C900C80D24 /* BSTopicModel.m in Sources */,
+				356E58721F1857A600C80D24 /* BSViedoCellView.m in Sources */,
 				356E583B1F170FB700C80D24 /* BSNavigationViewController.m in Sources */,
 				356E58521F1715AD00C80D24 /* BSBaseRequest.m in Sources */,
 				356E58601F17192300C80D24 /* BSAllViewController.m in Sources */,
+				356E58781F1857D000C80D24 /* BSPictureCellView.m in Sources */,
 				356E586B1F17517300C80D24 /* Foundation+Log.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

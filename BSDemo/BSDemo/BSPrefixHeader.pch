@@ -31,11 +31,11 @@
 
 #ifdef DEBUG // 调试
 
-#define XMGLog(...) NSLog(__VA_ARGS__);
+#define BSLog(...) NSLog(__VA_ARGS__);
 
 #else // 发布
 
-#define XMGLog(...)
+#define BSLog(...)
 
 #endif
 

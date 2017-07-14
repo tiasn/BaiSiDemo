@@ -51,7 +51,19 @@ typedef NS_ENUM(NSUInteger, BSTopicType) {
 /** 根据当前模型计算出来的cell高度 */
 @property (nonatomic, assign) CGFloat cellHeight;
 
-@property (nonatomic, assign) CGFloat textHeight;
+@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat height;
 
+
+
+//@property (nonatomic, assign) CGFloat textHeight;
+//
+//@property (nonatomic, assign) CGFloat videoHeight;
+//
+//@property (nonatomic, assign) CGFloat voiceHeight;
+//
+//@property (nonatomic, assign) CGFloat pictureHeight;
+
+@property (nonatomic, assign) CGRect middleFrame;
 
 @end

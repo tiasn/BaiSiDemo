@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BSTopicCellId" rowHeight="140" id="KGk-i7-Jjw" customClass="BSTopicViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BSTopicCellId" rowHeight="193" id="KGk-i7-Jjw" customClass="BSTopicViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="193"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="139.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="192.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8y-bY-YVr">
@@ -73,7 +73,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKG-hQ-YMj">
-                        <rect key="frame" x="0.0" y="89.5" width="320" height="40"/>
+                        <rect key="frame" x="0.0" y="142.5" width="320" height="40"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-content-line" translatesAutoresizingMaskIntoConstraints="NO" id="LaP-y8-jYa">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="0.5"/>
@@ -223,15 +223,22 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZC-DB-znc">
-                        <rect key="frame" x="0.0" y="129.5" width="320" height="10"/>
+                        <rect key="frame" x="0.0" y="182.5" width="320" height="10"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="10" id="GDy-za-hRW"/>
                         </constraints>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxC-4M-7aO">
+                        <rect key="frame" x="0.0" y="45" width="320" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="RKG-hQ-YMj" secondAttribute="trailing" id="5d5-qu-f5h"/>
+                    <constraint firstAttribute="trailing" secondItem="mxC-4M-7aO" secondAttribute="trailing" id="Djb-f3-1uM"/>
                     <constraint firstItem="Z8y-bY-YVr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="NND-vZ-VS8"/>
                     <constraint firstItem="Z8y-bY-YVr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TqE-Ml-YPx"/>
                     <constraint firstAttribute="trailing" secondItem="Z8y-bY-YVr" secondAttribute="trailing" id="Wi1-4e-l8E"/>
@@ -239,11 +246,14 @@
                     <constraint firstAttribute="bottom" secondItem="RKG-hQ-YMj" secondAttribute="bottom" constant="10" id="cuP-NI-PbM"/>
                     <constraint firstItem="aZC-DB-znc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gyQ-R4-uGx"/>
                     <constraint firstAttribute="trailing" secondItem="aZC-DB-znc" secondAttribute="trailing" id="hTk-b3-Ui1"/>
+                    <constraint firstItem="mxC-4M-7aO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lfz-xP-W9L"/>
+                    <constraint firstItem="mxC-4M-7aO" firstAttribute="top" secondItem="Z8y-bY-YVr" secondAttribute="bottom" constant="5" id="wHd-pQ-SCe"/>
                     <constraint firstAttribute="bottom" secondItem="aZC-DB-znc" secondAttribute="bottom" id="zev-AW-ihK"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="commentBtn" destination="X9x-da-aDU" id="2mw-pq-FGs"/>
+                <outlet property="contentLabel" destination="mxC-4M-7aO" id="Wlt-a1-KAy"/>
                 <outlet property="dingBtn" destination="m68-sU-pQQ" id="6Wm-qX-ClO"/>
                 <outlet property="hateBtn" destination="XeL-HU-Wnb" id="XZ6-eY-qcf"/>
                 <outlet property="headerImgView" destination="n4x-Q9-4qu" id="AbB-jz-MqN"/>
@@ -251,7 +261,7 @@
                 <outlet property="posTime" destination="iXY-yo-x8f" id="fEu-IW-US3"/>
                 <outlet property="shareBtn" destination="ewx-Jr-mbe" id="WU5-PP-8td"/>
             </connections>
-            <point key="canvasLocation" x="34" y="6"/>
+            <point key="canvasLocation" x="34" y="32.5"/>
         </tableViewCell>
     </objects>
     <resources>

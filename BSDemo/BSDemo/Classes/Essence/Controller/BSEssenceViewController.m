@@ -39,6 +39,8 @@
         
         _titleView = [[BSTitleView alloc] initWithFrame:titleFrame titles:titlesArray];
         _titleView.delegate = self;
+        
+        _titleView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
     }
     
     return _titleView;
@@ -55,7 +57,6 @@
 
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self.view addSubview:self.titleView];
     
     
     self.currentIndex = 0;
@@ -64,6 +65,9 @@
     [self setupAllChildVcs];
     
     [self setupContentScrollView];
+    
+    [self.view addSubview:self.titleView];
+
     
 }
 
@@ -84,8 +88,8 @@
 - (void)setupContentScrollView
 {
     
-    CGFloat contentY = CGRectGetMaxY(self.titleView.frame);
-    CGRect rect = CGRectMake(0, contentY, kSCREEN_WIDTH, kSCREEN_HEIGHT - kTitleViewH);
+//    CGFloat contentY = CGRectGetMaxY(self.titleView.frame);
+    CGRect rect = CGRectMake(0, 0, kSCREEN_WIDTH, kSCREEN_HEIGHT - kTitleViewH);
     
     self.contentScrollView = [[UIScrollView alloc] initWithFrame:rect];
     
@@ -99,7 +103,7 @@
     for (int i =0; i<self.childViewControllers.count; i++) {
         
         UIViewController *vc = [self.childViewControllers objectAtIndex:i];
-        vc.view.frame = CGRectMake(kSCREEN_WIDTH *i, 0, kSCREEN_WIDTH, self.contentScrollView.height);
+        vc.view.frame = CGRectMake(kSCREEN_WIDTH *i, kTitleViewH, kSCREEN_WIDTH, self.contentScrollView.height);
         
         [self.contentScrollView addSubview:vc.view];
         

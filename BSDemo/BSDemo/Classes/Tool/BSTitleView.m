@@ -56,7 +56,7 @@
 
 - (void)initUI
 {
-    self.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2];
+    self.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
     self.titleLable = [NSMutableArray array];
     self.currentIndex = 0;
     
@@ -66,6 +66,8 @@
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.scrollsToTop = NO;
     self.scrollView.bounces = NO;
+    
+    self.scrollView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
     
     [self addSubview:self.scrollView];
     
@@ -80,7 +82,7 @@
     
     //labe的值
     CGFloat lableW  = self.frame.size.width / (self.titles.count);
-    CGFloat lableH   = self.frame.size.height - kScrollLineH;
+    CGFloat lableH  = self.frame.size.height - kScrollLineH;
     CGFloat lableY  = 0;
     
     for (int i = 0; i< self.titles.count; i++) {

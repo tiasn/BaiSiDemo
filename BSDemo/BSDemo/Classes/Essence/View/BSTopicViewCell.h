@@ -16,13 +16,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *posTime;
 
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+
+// 顶
 @property (weak, nonatomic) IBOutlet UIButton *dingBtn;
+// 踩
 @property (weak, nonatomic) IBOutlet UIButton *hateBtn;
+// 分享
 @property (weak, nonatomic) IBOutlet UIButton *shareBtn;
+// 评论
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
-
-
-@property (nonatomic , strong) UILabel *content;
 
 
 @property (nonatomic , strong) BSTopicModel *model;

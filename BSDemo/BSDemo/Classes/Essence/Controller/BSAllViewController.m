@@ -67,8 +67,10 @@ static NSString * const BSTopicCellId = @"BSTopicCellId";
     
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
 
-    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, kTabbarH + kNavH, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(kNavH, 0, kTabbarH + kNavH, 0);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+
     
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self.topicModelsArray removeAllObjects];
@@ -98,8 +100,10 @@ static NSString * const BSTopicCellId = @"BSTopicCellId";
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
 //    parameters[@"type"] = @"1"; //全部
-    parameters[@"type"] = @"29"; // 段子
+//    parameters[@"type"] = @"29"; // 段子
 //    parameters[@"type"] = @"10"; // 图片
+
+        parameters[@"type"] = @"31"; // 视频
 
     parameters[@"maxtime"] = self.maxtime;
     parameters[@"page"] = @(self.topicModelsArray.count / 20);
@@ -175,14 +179,9 @@ static NSString * const BSTopicCellId = @"BSTopicCellId";
     BSTopicModel *model = [self.topicModelsArray objectAtIndex:indexPath.row];
     cell.model = model;
     
+    BSLog(@"%zd----%p", indexPath.row, cell);
+    
     return cell;
-}
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:NO];
-
 }
 
 @end
