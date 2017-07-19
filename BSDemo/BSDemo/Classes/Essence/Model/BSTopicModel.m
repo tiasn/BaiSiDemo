@@ -70,15 +70,18 @@
 
     
     _cellHeight += textHeight;
-    
+        
     // 中间的内容
     if (self.type != BSTopicTypeWord) { // 中间有内容（图片、声音、视频）
         CGFloat middleW = textMaxSize.width;
         CGFloat middleH = middleW * self.height / self.width;
         
-#warning 方便调试
-        middleH = middleH > 250 ? 250 : middleH; // 方便调试
 
+        if (middleH >= kSCREEN_HEIGHT) { // 显示的图片高度超过一个屏幕，就是超长图片
+            middleH = 200;
+            self.bigPicture = YES;
+        }
+        
         CGFloat middleY = _cellHeight;
         CGFloat middleX = 0;
         self.middleFrame = CGRectMake(middleX, middleY, middleW, middleH);

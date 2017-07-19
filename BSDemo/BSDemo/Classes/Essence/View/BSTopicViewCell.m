@@ -84,16 +84,17 @@
     [self.commentBtn setTitle:[NSString stringWithFormat:@"%zd", model.comment] forState:UIControlStateNormal];
     
 
+    [self.headerImgView tx_setHeader:model.profile_image];
     
-    UIImage *placeholder = [UIImage tx_circleImageNamed:@"defaultUserIcon"];
-    [self.headerImgView sd_setImageWithURL:[NSURL URLWithString:model.profile_image] placeholderImage:placeholder completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        
-          if (!image) return;
-        
-          self.headerImgView.image = [image tx_circleImage];
-        
-    }];
-    
+//    UIImage *placeholder = [UIImage tx_circleImageNamed:@"defaultUserIcon"];
+//    [self.headerImgView sd_setImageWithURL:[NSURL URLWithString:model.profile_image] placeholderImage:placeholder completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+//        
+//          if (!image) return;
+//        
+//          self.headerImgView.image = [image tx_circleImage];
+//        
+//    }];
+//    
     
     
     
@@ -124,9 +125,9 @@
     }else if (model.type == BSTopicTypePicture){
     
         self.pictureCellView.hidden = NO;
+        self.pictureCellView.model = model;
         self.videoCellView.hidden = YES;
         self.voiceCellView.hidden = YES;
-
         
     }else {
         

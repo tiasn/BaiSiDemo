@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class BSTopicModel;
+
+
 @interface BSPictureCellView : UIView
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *bigImageView;
+
+@property (nonatomic , strong) BSTopicModel *model;
+
+@property (weak, nonatomic) IBOutlet UIImageView *gifView;
+@property (weak, nonatomic) IBOutlet UIButton *seeBigImageBtn;
 
 @end

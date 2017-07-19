@@ -14,7 +14,7 @@
 
 #import "UIView+Extension.h"
 #import "UIImage+TX.h"
-
+#import "UIImageView+Download.h"
 
 #define BSCommonURL @"https://api.budejie.com/api/api_open.php"
 

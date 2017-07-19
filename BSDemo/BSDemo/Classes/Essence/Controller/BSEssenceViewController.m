@@ -57,6 +57,7 @@
 
     self.view.backgroundColor = [UIColor whiteColor];
     
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
     
     
     self.currentIndex = 0;
@@ -68,7 +69,7 @@
     
     [self.view addSubview:self.titleView];
 
-    
+
 }
 
 

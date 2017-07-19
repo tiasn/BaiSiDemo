@@ -156,6 +156,13 @@ static NSString * const BSTopicCellId = @"BSTopicCellId";
 
 
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    // 清除缓存
+    [[SDImageCache sharedImageCache] clearMemory];
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
