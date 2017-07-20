@@ -103,7 +103,7 @@ static NSString * const BSTopicCellId = @"BSTopicCellId";
 //    parameters[@"type"] = @"29"; // 段子
 //    parameters[@"type"] = @"10"; // 图片
 
-//        parameters[@"type"] = @"31"; // 视频
+//    parameters[@"type"] = @"31"; // 视频
 
     parameters[@"maxtime"] = self.maxtime;
     parameters[@"page"] = @(self.topicModelsArray.count / 20);
@@ -158,8 +158,11 @@ static NSString * const BSTopicCellId = @"BSTopicCellId";
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    // 清除缓存
+    // 清除所有SD缓存
     [[SDImageCache sharedImageCache] clearMemory];
+    
+    // 清除所有SD过期缓存 （壹周以前的）
+//    [[SDImageCache sharedImageCache] cleanDisk];
 }
 
 

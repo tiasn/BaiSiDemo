@@ -10,13 +10,44 @@
 #import "BSTopicModel.h"
 #import <UIImage+GIF.h>
 
+#import "BSBigImageViewController.h"
+
+
 @implementation BSPictureCellView
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
+    
     self.autoresizingMask = UIViewAutoresizingNone;
+    self.bigImageView.userInteractionEnabled = YES;
+    
+    //添加手势
+    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigImage)];
+    
+    [self.bigImageView addGestureRecognizer:tapGes];
+    
+    [self.seeBigImageBtn addTarget:self action:@selector(seeBigImage) forControlEvents:UIControlEventTouchUpInside];
     
 }
+
+
+- (void)seeBigImage {
+    
+    BSBigImageViewController *bigImg = [[BSBigImageViewController alloc] init];
+    bigImg.topicModel = self.model;
+    
+    [self.window.rootViewController presentViewController:bigImg animated:YES completion:^{
+        
+    }];
+    
+    
+//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:bigImg animated:YES completion:^{
+    
+//    }];
+}
+
+
 
 
 
