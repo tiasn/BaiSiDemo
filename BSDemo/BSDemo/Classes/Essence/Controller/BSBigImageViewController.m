@@ -63,13 +63,17 @@
     UIImageView *imgView = [[UIImageView alloc] init];
     [imgView sd_setImageWithURL:[NSURL URLWithString:self.topicModel.image1] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         if (!image) return ;
+    
         
     }];
+    
     
     imgView.width = scrollView.width;
     imgView.height = imgView.width  * self.topicModel.height / self.topicModel.width;
     
     imgView.x = 0;
+    
+    
     if (imgView.height > kSCREEN_HEIGHT) {
         imgView.y = 0;
         scrollView.contentSize = CGSizeMake(0, imgView.height);
@@ -107,9 +111,41 @@
 }
 
 
-
+//保存图片
 - (IBAction)saveImage:(UIButton *)sender {
+    
+//    UIImageWriteToSavedPhotosAlbum
+    UIImageWriteToSavedPhotosAlbum(self.imgView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    
 }
+
+// 保存图片
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if (error) {
+        [SVProgressHUD showErrorWithStatus:@"保存失败！"];
+    } else {
+        [SVProgressHUD showSuccessWithStatus:@"保存成功！"];
+    }
+}
+
+////保存视频
+//- (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+//{
+//
+//    if (error) {
+//        [SVProgressHUD showErrorWithStatus:@"保存失败！"];
+//    }else {
+//    
+//        [SVProgressHUD showSuccessWithStatus:@"保存成功！"];
+//    }
+//
+//}
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

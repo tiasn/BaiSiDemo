@@ -36,14 +36,13 @@
     
     BSBigImageViewController *bigImg = [[BSBigImageViewController alloc] init];
     bigImg.topicModel = self.model;
-    
+
     [self.window.rootViewController presentViewController:bigImg animated:YES completion:^{
-        
     }];
     
     
 //    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:bigImg animated:YES completion:^{
-    
+//    
 //    }];
 }
 
